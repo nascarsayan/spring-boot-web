@@ -1,3 +1,12 @@
+## Spring Boot
+
+Check the [initial setup guide here](./docs/initial-setup.md)
+
+Once, you have setup the project, you can start creating the controllers and services. Check this [guide to create controllers and know about annotations](./docs/springboot-annotations.md).
+
+
+## Diagrams
+
 ```mermaid
 erDiagram
   CUSTOMER ||--o{ ORDER : places
