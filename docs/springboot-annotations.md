@@ -43,5 +43,4 @@ In spring boot, there are several utility annotations to make the code more read
     ```
     In the above code, `@GetMapping("/hello")` is used to map the HTTP GET method to the method `hello()`. So, when you hit the URL `http://localhost:8081/api/hello`, it will return the string `Hello World!`.
 
-You can check a simple example of [a Spring Boot application here](../hunger/). You can run the application, and go to `http://localhost:8081/hello`
-
+You can check a simple example of [a Spring Boot application here](../hunger/). You can run the application, and go to `http://localhost:8081/restaurants/hello`
