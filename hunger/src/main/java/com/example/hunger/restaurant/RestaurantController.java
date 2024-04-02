@@ -1,12 +1,11 @@
 package com.example.hunger.restaurant;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("restaurants")
@@ -20,9 +19,27 @@ public class RestaurantController {
     }
 
     @PostMapping
-    public String createRestaurant(
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createRestaurant(
         @RequestBody Restaurant restaurant
     ) {
-        return restaurant.name;
+        restaurants.add(restaurant);
+    }
+
+    @GetMapping
+    public List<Restaurant> getRestaurants() {
+        return restaurants;
+    }
+
+    @GetMapping("{id}")
+    public Optional<Restaurant> getRestaurant(
+            @PathVariable("id") Integer id
+    ) {
+        for (Restaurant r: restaurants) {
+            if (r.id == id) {
+                return Optional.of(r);
+            }
+        }
+        return Optional.empty();
     }
 }

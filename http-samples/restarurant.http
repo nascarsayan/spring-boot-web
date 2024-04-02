@@ -1,11 +1,16 @@
-GET http://localhost:8081/
+GET http://localhost:8081/restaurants
 
 ###
 POST http://localhost:8081/restaurants
 Content-Type: application/json
 
 {
-  "name": "Rest 1",
-  "address": "Unknown",
-  "phone": "12345"
+  "id": 2,
+  "name": "Rest 2",
+  "address": "Addr 2",
+  "phone": "1234567"
 }
+
+###
+
+GET http://localhost:8081/restaurants/122
