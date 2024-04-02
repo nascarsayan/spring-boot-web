@@ -1,0 +1,11 @@
+GET http://localhost:8081/
+
+###
+POST http://localhost:8081/restaurants
+Content-Type: application/json
+
+{
+  "name": "Rest 1",
+  "address": "Unknown",
+  "phone": "12345"
+}
