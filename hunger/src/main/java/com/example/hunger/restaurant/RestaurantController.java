@@ -11,6 +11,12 @@ import java.util.Optional;
 @RequestMapping("restaurants")
 public class RestaurantController {
 
+    private final RestaurantRepository restaurantRepository;
+
+    public RestaurantController(RestaurantRepository orderRepository) {
+        this.restaurantRepository = orderRepository;
+    }
+
     List<Restaurant> restaurants = new ArrayList<>();
 
     @RequestMapping("hello")
@@ -24,11 +30,12 @@ public class RestaurantController {
         @RequestBody Restaurant restaurant
     ) {
         restaurants.add(restaurant);
+        restaurantRepository.insert(restaurant);
     }
 
     @GetMapping
     public List<Restaurant> getRestaurants() {
-        return restaurants;
+        return restaurantRepository.findAll();
     }
 
     @GetMapping("{id}")

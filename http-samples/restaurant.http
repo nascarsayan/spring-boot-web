@@ -5,10 +5,9 @@ POST http://localhost:8081/restaurants
 Content-Type: application/json
 
 {
-  "id": 2,
-  "name": "Rest 2",
-  "address": "Addr 2",
-  "phone": "1234567"
+  "name": "Rest 1",
+  "address": "Addr 1",
+  "phone": "1234567890"
 }
 
 ###

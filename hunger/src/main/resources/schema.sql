@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS restaurants (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL
+);
