@@ -33,7 +33,7 @@ public class RestaurantController {
 
     @GetMapping("{id}")
     public Optional<Restaurant> getRestaurant(
-            @PathVariable("id") Integer id
+        @PathVariable("id") Integer id
     ) {
         for (Restaurant r: restaurants) {
             if (r.id == id) {
