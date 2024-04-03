@@ -40,3 +40,10 @@ https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 ###
 
 In the VSCOde extension tab search `bierner.markdown-mermaid` and install for VSCode memaid syntax support
+
+## Database
+
+Go to https://console.aiven.io/ and create a mysql free instance.
+Have the connection string ready.
+
+![AivenFreeMySQL.jpg](./screenshots/AivenFreeMySQL.jpg)
