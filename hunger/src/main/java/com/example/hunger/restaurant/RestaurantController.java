@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("restaurants")
+@RequestMapping("api/restaurants")
 public class RestaurantController {
 
     private final RestaurantRepository restaurantRepository;

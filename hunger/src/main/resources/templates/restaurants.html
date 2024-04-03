@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>All restaurants</h1>
+<div class="restaurants">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="restaurant: ${restaurants}">
+            <tr>
+                <td th:text="${restaurant.id}"></td>
+                <td th:text="${restaurant.name}"></td>
+                <td th:text="${restaurant.address}"></td>
+                <td th:text="${restaurant.phone}"></td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+    <button id="click-me">Click me</button>
+    <script src="/js/main.js"></script>
+</div>
+</body>
+</html>
